@@ -1,0 +1,507 @@
+@charset "utf-8";
+/* CSS Document */
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+*, html {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  max-width: 100%;
+  position: relative;
+  margin: 0 auto;
+  color:var(--gray);
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
+p, h1, h2, h3, h4 {
+  text-autospace: no-autospace;
+  /*word-break: auto-phrase;*/
+
+}
+a, p, li, dd, th, td {
+  font-size: clamp(1.1rem, 1.1vw, 1.1rem);
+  text-autospace: no-autospace;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--gray);
+}
+a:hover {
+  color: var(--blue);
+  cursor: pointer;
+  /*opacity: .6;*/
+  transition: 0.5s;
+}
+.flex {
+  display: flex;
+}
+.jcsb {
+  justify-content: space-between;
+}
+.jcc {
+  justify-content: center;
+}
+:root {
+  --blue:#3e60ce;
+  --gray:#555555;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clear {
+  clear: both;
+}
+.tac {
+  text-align: center;
+}
+.m0a {
+  margin: 0 auto;
+}
+.wb {
+  word-break: auto-phrase;
+}
+
+section{
+  padding-bottom: 100px;
+}
+
+.white{
+	color: #fff;
+}
+
+/*-------------ヘッダー----------------*/
+header {
+  width: 100vw;
+  height: 100px;
+  position: fixed;
+  z-index: 20;
+  margin: 0 auto;
+}
+
+.top_logo{
+  background-color: #fff;
+  padding: 50px;
+  border-bottom-right-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.top_logo img{
+  width: 150px;
+  height: auto;
+}
+
+/* ---------------ナビゲーション------------------ */
+
+.main_nav ul{
+
+ background-color: #fff;
+ padding:10px 30px ;
+ border-radius: 50px;
+ margin: 30px;
+ 
+}
+.nav_menu_li{
+  margin-right: 15px;
+  margin-top: 7px;
+}
+
+.top_contact_btn{
+background-color: var(--blue);
+color: #fff;
+padding: 10px 15px;
+border-radius: 50px;
+}
+.top_contact_btn a{
+  color: #fff;
+  font-weight: bold;
+}
+
+/* ---------------セクションタイトル------------------ */
+
+/*-------------ノーマル----------------*/
+
+.sec_title1{
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sec_title1 span{
+  color: var(--blue);
+}
+
+.sec_title2{
+  margin: 0 auto;
+  width: 100px;
+  padding: 10px 0;
+  text-align: center;
+  border-top: var(--gray) solid 2px;
+  border-bottom: var(--gray) solid 2px;
+}
+/*-------------白----------------*/
+.sec_title3{
+	color: #fff;
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sec_title4{
+	color: #fff;
+  margin: 0 auto;
+  width: 100px;
+  padding: 10px 0;
+  text-align: center;
+  border-top: #fff solid 2px;
+  border-bottom: #fff solid 2px;
+}
+
+/* ---------------見出し------------------ */
+.sec_midasi{
+width: 100%;
+margin: 0 auto;
+padding: 50px 0;
+}
+
+.midasi_text1{
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.midasi_text2{
+  text-align: center;
+}
+
+/* ---------------支援実績------------------ */
+.sec_results{
+	padding-top: 100px;
+}
+
+@keyframes infinity-scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+IE11対策 _:-ms-lang(x)::-ms-backdrop, .d-demo {
+  display: -ms-grid;
+  overflow: hidden;
+}
+
+.d-demo__wrap {
+  display: flex;
+  overflow: hidden;
+  margin-bottom: -20px;
+}
+.d-demo__list {
+  display: flex;
+  list-style: none;
+  margin-bottom: -10px;
+}
+.d-demo__list--left {
+  animation: infinity-scroll-left 100s infinite linear 0.5s both;
+}
+.d-demo__item {
+  width: auto;
+  height: 100px;
+}
+.d-demo__item > img {
+  height: 70%;
+  width: auto;
+}
+
+
+/*-------------矢印アニメーション----------------*/
+.container {
+  margin: 0 auto;
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+.chevron {
+  position: absolute;
+  top: -70px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 50px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+.chevron:before, .chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #333;
+}
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+@keyframes move {
+  25% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(45px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(60px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+/* ---------------こんな課題はありませんか？------------------ */
+
+.sec_assignment{
+	width: 90%;
+	margin: 0 auto;
+}
+
+.assignment_title{
+	text-align: center;
+	padding: 10px 0;
+	margin-bottom: 30px;
+}
+
+
+
+.assignment_li{
+	text-align: center;
+	width: calc(100%/3);
+	padding: 20px 0px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	border: solid 1px #333;
+	position: relative;
+    border: 2px solid var(--blue);
+    overflow: hidden;
+}
+
+.assignment_li::before {
+    position: absolute;
+    content: '';
+    right: 0px;
+    bottom: 0px;
+    border-width: 0px 0px 15px 15px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--blue);
+}
+
+/* ---------------我々が全て解決致します------------------ */
+
+.bg_1{
+	background: var(--blue);
+	clip-path: polygon(0 3%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.sec_solution{
+	width: 90%;
+	margin: 0 auto;
+	position: relative;
+	padding-top: 100px;
+	z-index: 1;
+}
+
+
+
+.solution_text{
+	text-align: center;
+	margin-top: 30px;
+}
+
+.sec_solution ul{
+	margin: 50px 0;
+}
+
+.solution_li{
+	width: calc(100%/3);
+  height: 200px;
+  background-color: #cad1db;
+  margin-right: 20px;
+  border-bottom-right-radius: 50px;
+	border-top-left-radius: 50px;
+  border: solid #acacac 2px;
+}
+/* ---------------選ばれる理由------------------ */
+
+.sec_reason{
+	width: 90%;
+	margin: 0 auto;
+}
+
+.sec_reason ul{
+	margin: 50px 0;
+}
+
+.reason_li{
+	width: calc(100%/3);
+  height: 200px;
+  background-color: #cad1db;
+  margin-right: 20px;
+  border-bottom-right-radius: 50px;
+	border-top-left-radius: 50px;
+  border: solid #acacac 2px;
+}
+
+/* ---------------TOPサービス一覧------------------ */
+
+.sec_survise{
+ margin: 0 auto;
+ width: 90%;
+padding-top: 70px;	
+}
+
+.sec_survise ul{
+ margin: 50px 0;
+}
+
+.survise_li{
+  width: calc(100%/3);
+  height: 300px;
+  background-color: #cad1db;
+  margin-right: 20px;
+  border-radius: 50px;
+  border: solid #acacac 2px;
+}
+
+.survise_li:last-of-type{
+  margin-right: 0px;
+}
+
+/* ---------------会社について------------------ */
+.sec_company{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.company_table{
+  margin: 50px auto;
+  width: 70%;
+  border-collapse: collapse;
+}
+
+.company_table tr{
+  border-bottom: solid #333 2px;
+}
+
+.company_table td {
+  padding: 20px;
+}
+.company_table th {
+  border-bottom: solid var(--blue) 2px;
+  padding: 20px;
+  padding: 0px 0px;
+  width: 30%;
+}
+
+/* ---------------トピックス------------------ */
+
+.sec_topics{
+  width: 80%;
+  margin:0 auto;
+}
+
+.sec_topics ul{
+  margin: 50px 0;
+}
+
+.topics_day,.topics_midasi{
+ display: inline-block;
+}
+
+.topics_li{
+  margin: 10px;
+  padding: 10px;
+  background-color:#acacac;
+  border-radius: 50px;
+}
+
+.topics_day{
+  font-weight: bold;
+  margin: 0 30px;
+}
+
+.topics_midasi{
+  font-size: 1.1em;
+}
+
+/* ---------------フッター------------------ */
+
+footer{
+  text-align: center;
+}
+
+
+/* ---------------資料請求------------------ */
+
+.document_btn{
+  width: 300px;
+  height: auto;
+  background-color: #fff;
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  padding: 20px;
+  
+}
+
+.document_btn h3{
+  color: var(--blue);
+  font-weight: 900;
+}
+
+.document_btn figure{
+  position: absolute;
+  top: -5px;
+  right: 10px;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.document_btn figure.close{
+  display: none;
+}
