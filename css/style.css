@@ -267,11 +267,29 @@ main {
 }
 /* ---------------見出し------------------ */
 .sec_midasi {
-  width: 100%;
+  width: 1260px;
   margin: 0 auto;
-  padding: ;
 	margin-top: 100px;
+	position: relative;
 }
+
+.sub_img,.sub_img2{
+	position: absolute;
+	height: 250px;
+	top: -70px;
+	width: auto;
+}
+
+.sub_img{
+	
+	left: 90px;
+}
+
+.sub_img2{
+	
+	right: 30px;
+}
+
 .midasi_text1 {
   text-align: center;
   font-size: 2.5rem;
@@ -282,6 +300,7 @@ main {
 }
 /* -------------お知らせ------------------ */
 .sec_news {
+	width: 1260px;
   margin: 0 auto;
   text-align: center;
 }
@@ -342,7 +361,7 @@ main {
 }
 /* ---------------こんな課題はありませんか？------------------ */
 .sec_assignment {
-  width: 70%;
+  width: 1260px;
   margin: 0 auto;
   padding-top: 70px;
 }
@@ -377,8 +396,7 @@ main {
   clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
 }
 .sec_solution {
-  max-width: 1100px;
-  width: 66%;
+  width: 1100px;
   margin: 0 auto;
   position: relative;
   padding-top: 100px;
@@ -481,8 +499,7 @@ main {
 }
 /* ---------------選ばれる理由------------------ */
 .sec_reason {
-  max-width: 1100px;
-  width: 66%;
+  width: 1100px;
   margin: 0 auto;
   padding-top: 70px;
 }
@@ -522,7 +539,7 @@ main {
 /* ---------------TOPサービス一覧------------------ */
 .sec_survise {
   margin: 0 auto;
-  width: 90%;
+  width: 1260px;
   max-width: 1200px;
   padding-top: 100px;
 }
@@ -544,7 +561,7 @@ main {
 }
 .survise_list_title {
   margin: 10px 0;
-  font-size: 2.5vmin;
+  font-size: 1.5rem;
   word-break: keep-all;
 }
 .survise_list_btn {
@@ -569,7 +586,7 @@ main {
 }
 /* ---------------会社について------------------ */
 .sec_company {
-  width: 90%;
+  width: 1260px;
   margin: 0 auto;
   padding-top: 70px;
 }
