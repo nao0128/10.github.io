@@ -86,7 +86,7 @@ header {
   width: 100vw;
   height: 100px;
   position: fixed;
-  z-index: 20;
+  z-index: 30;
   margin: 0 auto;
 }
 .top_logo {
@@ -200,9 +200,9 @@ main {
 /* ---------------ナビゲーション------------------ */
 .main_nav ul {
   background-color: #fff;
-  padding: 10px 10px 10px 40px;
+  padding: 15px 15px 15px 45px;
   border-radius: 50px;
-  margin: 30px;
+  margin: 50px 50px 0 0;
 }
 .nav_menu_li {
   margin-right: 40px;
@@ -215,19 +215,23 @@ main {
 .top_contact_btn {
   background-color: var(--blue);
   color: #fff;
-  padding: 10px 15px;
+  padding: 10px 20px;
   border-radius: 50px;
 }
 .top_contact_btn a {
   color: #fff;
   font-weight: bold;
+  font-size: 0.9rem;
 }
 /* -------------お知らせ------------------ */
 .sec_news {
+  width: 700px;
+  padding: 20px 0 15px 0;
   position: absolute;
-  bottom: -20px;
+  bottom: 4%;
   left: 3%;
   z-index: 20;
+  background: rgba(255, 255, 255, 0.35);
 }
 /*
 .sec_news h4 {
@@ -235,14 +239,14 @@ main {
 }
 */
 .sec_news_img {
-  width: 90%;
+  width: 100%;
   height: auto;
-  margin: 20px 0;
+  margin-bottom: 10px;
 }
 .news_btn {
   width: 350px;
   height: 60px;
-  border: 1px solid #fff;
+  border: 1px solid var(--gray);
   border-radius: 50px;
   background-color: #fff;
   text-align: center;
@@ -251,7 +255,7 @@ main {
   box-sizing: border-box;
   /*border-radius: 50px;*/
   overflow: hidden;
-  margin-left: 80px;
+  margin: 0 auto;
 }
 .news_btn a {
   font-size: 13px;
@@ -274,9 +278,9 @@ main {
   right: -35px;
 }
 .eff-news {
-  width: 400px;
+  width: 350px;
   height: 60px;
-  left: -400px;
+  left: -350px;
   background-color: #f4eb8f;
   position: absolute;
   transition: all .5s ease;
@@ -350,6 +354,8 @@ main {
 }
 .midasi_text2 {
   text-align: center;
+  font-size: 0.95rem;
+  line-height: 2.0em;
 }
 /* ---------------こんな課題はありませんか？------------------ */
 .sec_assignment {
@@ -447,7 +453,7 @@ main {
 }
 /* ---------------我々が全て解決致します------------------ */
 .bg_1 {
-  background: var(--blue);
+  background: #eaf5f9;
   clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
 }
 .sec_solution {
@@ -461,6 +467,8 @@ main {
 .solution_text {
   text-align: center;
   margin-top: 30px;
+  color: var(--gray);
+  font-weight: bold;
 }
 .sec_solution ul {
   margin: 50px 0;
@@ -496,7 +504,9 @@ main {
   right: 0;
   left: 0;
   margin: auto;
+  margin-top: 35px;
   padding: 0 5px;
+  font-weight: 700;
 }
 /* ---------------選ばれる理由------------------ */
 .sec_reason {
@@ -509,7 +519,7 @@ main {
 }
 .reason_li {
   width: calc(100%/3);
-  height: 290px;
+  height: 350px;
   background-color: #cad1db;
   margin-right: 30px;
   border-bottom-right-radius: 50px;
@@ -543,6 +553,7 @@ main {
   right: 0;
   left: 0;
   margin: auto;
+  margin-top: 40px;
   padding: 0 5px;
 }
 /* ---------------TOPサービス一覧------------------ */
@@ -556,22 +567,51 @@ main {
 }
 .survise_li {
   width: calc(100%/3);
-  height: 235px;
-  padding: 20px;
+  height: 500px;
   background-color: rgba(56, 59, 77, 0.1);
   margin-right: 35px;
   border-radius: 50px;
   border: solid rgba(56, 59, 77, 0.1) 2px;
   position: relative;
 }
+.survise_li_logo {
+  width: 70px;
+  height: auto;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.survise_list_text {
+  line-height: 1.7em;
+  font-size: 0.95rem;
+}
 .survise_li:last-of-type {
   margin-right: 0px;
 }
 .survise_list_title {
-  text-align: center;
   display: block;
-  margin: 15px auto;
-  font-size: 1.3rem;
+  margin: 15px 15px 15px 50px;
+  font-size: 1.2rem;
+}
+.survise_list_text {
+  display: block;
+  margin: 15px;
+}
+.survise_list_title .arrow {
+  position: absolute;
+  top: 0;
+  left: 12px;
+  bottom: 0px;
+  margin: auto;
+  width: 25px;
+  height: 25px;
+  /*border-radius: 50%;*/
+  transition: .3s ease-in-out;
+  padding: 7px;
+  background: var(--blue);
+}
+.survise_list_title a:hover .arrow {
+  left: 17px;
 }
 .survise_list_btn {
   bottom: 25px;
@@ -589,11 +629,9 @@ main {
   font-size: 1.5vmin;
   text-align: center;
 }
-
-.survise_list_btn:hover{
-	opacity: 0.7;
+.survise_list_btn:hover {
+  opacity: 0.7;
 }
-
 /* ---------------会社について------------------ */
 .sec_company {
   width: 1260px;
@@ -610,6 +648,8 @@ main {
 }
 .company_table td {
   padding: 20px;
+  line-height: 1.8em;
+  font-size: 0.95rem;
 }
 .company_table th {
   border-bottom: solid var(--blue) 2px;
@@ -682,11 +722,12 @@ IE11対策 _:-ms-lang(x)::-ms-backdrop, .d-demo {
   border-radius: 50px;
 }
 .topics_day {
-  font-weight: bold;
+  font-weight: 600;
   margin: 0 30px;
 }
 .topics_midasi {
-  font-size: 1.1em;
+  font-size: 1.0em;
+  font-weight: 600;
 }
 /*---------------コンタクト①------------------*/
 .bg_contact {
