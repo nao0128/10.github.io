@@ -141,6 +141,7 @@ header {
 .img-box img {
   position: absolute;
   width: 100%;
+	min-width: 1600px;
   height: auto;
   left: 0;
   right: 0;
@@ -183,17 +184,17 @@ main {
 .main_text {
   margin-bottom: 10px;
   background-color: #fff;
-  font-size: 2.8rem;
+  font-size: 3.5rem;
 }
 .main_text:first-of-type {
-  width: 315px;
+  width: 400px;
 }
 .main_text span {
   color: var(--blue);
 }
 .main_text_wrap {
   position: absolute;
-  bottom: 28%;
+  bottom: 25%;
   right: 11%;
   z-index: 20;
 }
@@ -354,7 +355,7 @@ main {
 }
 .midasi_text2 {
   text-align: center;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   line-height: 2.0em;
 }
 /* ---------------こんな課題はありませんか？------------------ */
@@ -457,7 +458,7 @@ main {
   clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
 }
 .sec_solution {
-  width: 1100px;
+  width: 1200px;
   margin: 0 auto;
   margin-top: -100px;
   position: relative;
@@ -474,7 +475,7 @@ main {
   margin: 50px 0;
 }
 .solution_li {
-  width: calc(100%/3);
+  width: calc(1100px/3);
   height: 350px;
   background-color: #cad1db;
   margin-right: 30px;
@@ -559,79 +560,36 @@ main {
 /* ---------------TOPサービス一覧------------------ */
 .sec_survise {
   margin: 0 auto;
-  width: 1100px;
-  padding-top: 100px;
+  width: 1350px;
+  padding-top: 150px;
 }
-.sec_survise ul {
-  margin: 50px 0;
+
+.survise_ul{
+	margin-top: 70px;
 }
-.survise_li {
-  width: calc(100%/3);
-  height: 500px;
-  background-color: rgba(56, 59, 77, 0.1);
-  margin-right: 35px;
-  border-radius: 50px;
-  border: solid rgba(56, 59, 77, 0.1) 2px;
-  position: relative;
+
+.survise_ul li{
+width: calc(790px/3);	
+margin: 10px 0 10px 0;
+padding-bottom: 15px;
+	position: relative;
 }
-.survise_li_logo {
-  width: 70px;
-  height: auto;
-  position: absolute;
-  top: 10px;
-  left: 10px;
+
+.survise_ul li::after{
+	content: '';
+	width: 220px;
+	height: 1px;
+	background: #dcdcdc;
+	position: absolute;
+	bottom: 0;
+	left: 0;
 }
-.survise_list_text {
-  line-height: 1.7em;
-  font-size: 0.95rem;
+
+.survise_ul li:last-child::after{
+	display: none;
 }
-.survise_li:last-of-type {
-  margin-right: 0px;
-}
-.survise_list_title {
-  display: block;
-  margin: 15px 15px 15px 50px;
-  font-size: 1.2rem;
-}
-.survise_list_text {
-  display: block;
-  margin: 15px;
-}
-.survise_list_title .arrow {
-  position: absolute;
-  top: 0;
-  left: 12px;
-  bottom: 0px;
-  margin: auto;
-  width: 25px;
-  height: 25px;
-  /*border-radius: 50%;*/
-  transition: .3s ease-in-out;
-  padding: 7px;
-  background: var(--blue);
-}
-.survise_list_title a:hover .arrow {
-  left: 17px;
-}
-.survise_list_btn {
-  bottom: 25px;
-  right: 0;
-  left: 0;
-  margin: 0 auto;
-  position: absolute;
-  display: block;
-  padding: 15px 0;
-  width: 75%;
-  background: var(--blue);
-  color: #fff;
-  font-weight: bold;
-  border-radius: 50px;
-  font-size: 1.5vmin;
-  text-align: center;
-}
-.survise_list_btn:hover {
-  opacity: 0.7;
-}
+
+
 /* ---------------会社について------------------ */
 .sec_company {
   width: 1260px;
@@ -705,30 +663,92 @@ IE11対策 _:-ms-lang(x)::-ms-backdrop, .d-demo {
   clip-path: polygon(0 7%, 100% 0, 100% 100%, 0% 100%);
 }
 .sec_topics {
-  width: 60%;
+  width: 1200px;
   margin: 0 auto;
   padding-top: 100px;
 }
-.sec_topics ul {
-  margin: 50px 0 0 0;
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+   width:94%;
+    margin:0 auto;
+	
 }
-.topics_day, .topics_midasi {
-  display: inline-block;
+
+.slider img {
+    width:100%;/*スライダー内の画像を横幅100%に*/
+    height:auto;
 }
-.topics_li {
-  margin: 10px;
-  padding: 10px;
-  background-color: #fff;
-  border-radius: 50px;
+
+.slider li{
+	
+	background-color:#fff;
+	border-radius: 50px;
+	overflow: hidden;
 }
-.topics_day {
-  font-weight: 600;
-  margin: 0 30px;
+
+.slider li h1{
+	font-size: 1.0rem;
 }
-.topics_midasi {
-  font-size: 1.0em;
-  font-weight: 600;
+
+/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+
+.slider .slick-slide {
+    margin:0 10px;
 }
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+    position: absolute;
+    top: 42%;
+    cursor: pointer;
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #ccc;/*矢印の色*/
+    border-right: 2px solid #ccc;/*矢印の色*/
+    height: 15px;
+    width: 15px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+    left: -1.5%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+    right: -1.5%;
+    transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+    text-align:center;
+  margin:20px 0 0 0;
+}
+
+.slick-dots li {
+    display:inline-block;
+  margin:0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width:8px;/*ドットボタンのサイズ*/
+    height:8px;/*ドットボタンのサイズ*/
+    display:block;
+    border-radius:50%;
+    background:#ccc;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+    background:#333;/*ドットボタンの現在地表示の色*/
+}
+
 /*---------------コンタクト①------------------*/
 .bg_contact {
   background: #383b4d;
@@ -901,7 +921,7 @@ footer ul {
   margin-bottom: 50px;
 }
 .footer_logo {
-  max-width: 700px;
+  max-width: 1000px;
   margin: 0 auto;
   margin-bottom: 70px;
 }
@@ -916,7 +936,7 @@ footer ul {
 }
 /* ---------------資料請求------------------ */
 .document_btn {
-  width: 300px;
+  width: 350px;
   height: auto;
   background-color: #fff;
   position: fixed;
@@ -928,6 +948,11 @@ footer ul {
   color: var(--blue);
   font-weight: 900;
 }
+
+.document_btn p{
+	padding:5px;
+}
+
 .document_btn figure {
   position: absolute;
   top: -5px;
@@ -941,8 +966,8 @@ footer ul {
 /* ---------------TOPにもどるボタン------------------ */
 #page-top {
   position: fixed;
-  bottom: 170px;
-  right: 40px;
+  bottom: 150px;
+  right: 10px;
   z-index: 99;
 }
 #page-top a {
